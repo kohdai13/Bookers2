@@ -7,7 +7,7 @@
     </div>
 
     <div class="col-md-8 offset-md-1">
-      <h1>Books</h1>
+      <h2>Books</h2>
       <table class="table">
         <thead>
           <tr>
@@ -21,10 +21,10 @@
             <tr>
               <td>
                 <%= link_to user_path(book.user.id) do %>
-                  <% if @user.profile_image.attached? %>
-                    <%= image_tag @user.profile_image, size: "60x60" %>
+                  <% if book.user.profile_image.attached? %>
+                    <%= image_tag book.user.profile_image, size: "60x60" %>
                   <% else %>
-                    <%= image_tag 'no_image', size: "60x60" %>
+                    <%= image_tag 'no_image', size: "40x40" %>
                   <% end %>
                 <% end %>
               </td>

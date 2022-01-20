@@ -7,7 +7,7 @@
     </div>
 
     <div class="col-md-8 offset-md-1">
-      <h1>Users</h1>
+      <h2>Users</h2>
       <table class="table table-resposive">
         <thead>
           <tr>
@@ -23,7 +23,7 @@
                 <% if user.profile_image.attached? %>
                   <%= image_tag user.profile_image, size: "60x60" %>
                  <% else %>
-                  <%= image_tag 'no_image', size: "60x60" %>
+                  <%= image_tag 'no_image', size: "40x40" %>
                 <% end %>
               </td>
               <td>

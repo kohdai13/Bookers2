@@ -1,22 +1,22 @@
 <div class="container pt-3 pb-5">
   <div class="row">
     <div class="col-md-3 pr-1">
-      <%= render "users/userinfo",user:@user %>
+      <%= render "users/userinfo",user:@book.user %>
       <%= render "books/booksubmit",book:@book_new %>
     </div>
 
     <div class="col-md-8 offset-md-1">
-      <h1>Book detail</h1>
+      <h2>Book detail</h2>
         <div>
           <table class="table">
             <tbody>
               <tr>
                 <td>
                   <%= link_to user_path(@book.user.id) do %>
-                    <% if @user.profile_image.attached? %>
-                      <%= image_tag @user.profile_image, size: "1000x100" %>
+                    <% if @book.user.profile_image.attached? %>
+                      <%= image_tag @book.user.profile_image, size: "100x100" %><br>
                     <% else %>
-                      <%= image_tag 'no_image', size: "100x100" %>
+                      <%= image_tag 'no_image', size: "40x40" %><br>
                     <% end %>
                     <%= @book.user.name %>
                   <% end %>
